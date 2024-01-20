@@ -20,7 +20,8 @@ const useDataFetching = (dataSource) => {
                 setError(error.message);
             }
         }
-    }, dataSource)
+        fetchData();
+    }, [dataSource])
 
     return[loading, error, data];
 }
